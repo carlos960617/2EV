@@ -63,14 +63,14 @@ public class Fecha {
 
         anyocorrecto = (modelAnyo>0);
         mescorrecto = (modelMes>=1 && modelMes<=12);
-        if (modelMes == 2){
+        if (modelMes == 2){ //¿Que pasa si el usuario inserta un int que es 02 en lugar de 2?
             if (esBisiesto()){
                 diacorrecto = (modelDia>=1 && modelDia<=29);
             }else
                 diacorrecto = (modelDia>=1 && modelDia<=28);
         } else if (modelMes==1 || modelMes==3 || modelMes==5|| modelMes==7|| modelMes==8|| modelMes==10|| modelMes==12) {
-            diacorrecto = (modelDia>=1 || modelDia<=31);
-        }else{diacorrecto = (modelDia<=1 || modelDia>=30);
+            diacorrecto = (modelDia>=1 && modelDia<=31); //¿Porque dice que siempre es true?
+        }else{diacorrecto = (modelDia>=1 && modelDia<=30);
         }
 
         return diacorrecto && mescorrecto && anyocorrecto;
@@ -93,12 +93,12 @@ public class Fecha {
         int mesDado = sc.nextInt();
         int anyoDado = sc.nextInt();
 
-        System.out.println("Dia:"+diaDado+"Mes"+mesDado+"Anyo"+anyoDado+".");
+        System.out.println("Dia: "+diaDado+". Mes: "+mesDado+". Anyo "+anyoDado+".");
 
         Fecha fechanueva = new Fecha(diaDado, mesDado, anyoDado);
 
         if(fechanueva.fechaCorrecta()){
-            System.out.println("La fecha"+fechanueva+"es correcta.");
+            System.out.println("La fecha introducida es correcta.");
         }else {
             System.out.println("La fecha es incorrecta");
         }
