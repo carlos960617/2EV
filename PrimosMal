@@ -3,7 +3,7 @@ package com.company;
 import java.util.Scanner;
 
 
-public class T4_R$Primos {
+public class T4_R$PrimosMal {
 
     //Calcular dado un numero cuantos primos hay comprendidos entre este y el 1.
 
