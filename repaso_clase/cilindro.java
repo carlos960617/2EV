@@ -1,4 +1,4 @@
-package com.company.repaso;
+package com.company.repaso_clase;
 
 import java.util.Scanner;
 
