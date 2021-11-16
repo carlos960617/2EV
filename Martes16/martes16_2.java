@@ -6,7 +6,11 @@ public class martes16_2 {
 
     public static void primos(int n){
 
+        //Hay que añadir un contador para saber cuantos primos hay, no solo imprimri el valor de los primos.
+
         System.out.print("Estos son los numeros primos entre 1 y "+n+": 2");
+
+        int count=1;
 
         boolean esPrimo = true;
 
@@ -23,8 +27,11 @@ public class martes16_2 {
 
             if (esPrimo){
                 System.out.print(", "+i);
+                count++;
             }
         }
+
+        System.out.println("\nLa cantidad de primos es: "+count+".");
 
     }
 
