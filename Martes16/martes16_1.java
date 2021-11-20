@@ -4,7 +4,13 @@ import java.util.Scanner;
 
 public class martes16_1 {
 
-    public static void palabras(String cadena){
+    public static int palabras(String cadena){
+
+        /*
+        Cuando en el enunciado especifica "devolver" significa que el
+        metodo tiene que ser del tipo de dato que se quiere conseguir
+        no puede ser un void con un print porque sino despues no se puede
+        reutilizar ese valor en el resto de main*/
 
         int countEspacios = 1;
 
@@ -14,7 +20,7 @@ public class martes16_1 {
             }
         }
 
-        System.out.println("Tu cadena tiene "+countEspacios+" palabras");
+        return countEspacios;
 
     }
 
@@ -26,7 +32,9 @@ public class martes16_1 {
 
         String cadena = sc.nextLine();
 
-        martes16_1.palabras(cadena);
+        int numWords = martes16_1.palabras(cadena);
+
+        System.out.println("Tu cadena tiene "+numWords+" palabras");
 
 
 
