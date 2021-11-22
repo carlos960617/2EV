@@ -6,6 +6,8 @@ public class perroLadrador {
 
     public static boolean hayQueDespertarse(boolean ladrido, int horaDelDia ){
 
+        //piensa si hay que añadir un parentesis entre los OR para que ladrido && se evalue con ambas situaciones
+
         if(ladrido && horaDelDia<8 || horaDelDia>22){
             return horaDelDia <= 23 && horaDelDia >= 0;
         }else{return false;}
