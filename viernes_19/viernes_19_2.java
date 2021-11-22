@@ -11,7 +11,7 @@ public class viernes_19_2 {
         String nombre="";
         String apellido="";
         int edad;
-        boolean esAdolescente;
+
 
         public String getNombre() {
 
@@ -24,6 +24,8 @@ public class viernes_19_2 {
         public void setNombre(String nombre) {
             this.nombre = nombre;
         }
+
+        //conforme estaba redactado el enunciado las validaciones de getNombre y getApellido deberían ir en getFullName
 
         public String getApellido() {
 
