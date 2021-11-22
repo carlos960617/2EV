@@ -4,9 +4,11 @@ import java.util.Scanner;
 
 public class cilindro {
 
+
+
     public static void volArea(int r, int a, char x){
 
-        double resultflat = 1;
+        double resultflat;
 
         if(x == 'a'){
 
@@ -34,8 +36,8 @@ public class cilindro {
 
         int a = sc.nextInt();
 
-        System.out.println("Introduce \'a\' para averiguar su area o \n" +
-                "\'v\' para averiguar su volumen. ");
+        System.out.println("Introduce 'a' para averiguar su area o \n" +
+                "'v' para averiguar su volumen. ");
 
         char x = sc.next().charAt(0);
 
