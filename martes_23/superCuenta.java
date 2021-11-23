@@ -4,11 +4,13 @@ import java.util.Scanner;
 
 public class superCuenta {
 
+    //private los atributos para que se tengan
+
     public static class Cuenta {
-        String cliente= "";
-        String nCuenta= "";
-        double tInteres= 0.0;
-        double saldo = 0.0;
+        private String cliente= "";
+        private String nCuenta= "";
+        private double tInteres= 0.0;
+        private double saldo = 0.0;
 
         public Cuenta(){}
 
@@ -47,6 +49,19 @@ public class superCuenta {
                 return true;
             }else{return false;}
         }
+
+        //ingreso y reintegro no se utilizaban a lo largo del programa porque se pueden utilizar en transferencia:
+
+        /*
+        public void Transferencia(Cuenta cDestino, double importe){
+            if(reintegro(cantidad){
+                cDestino.ingreso(cantidad);
+                return true;
+            }else{
+                System.out.println("La cuenta origen no dispone de suficiente saldo.");
+            }
+        }
+        * */
 
         public void Transferencia(Cuenta cDestino, double importe){
             if(saldo >= importe){

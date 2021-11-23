@@ -2,37 +2,41 @@ package com.company.martes_23;
 
 import java.util.Scanner;
 
+import com.company.martes_23.superCuenta.Cuenta;
+
+//si estubiese en un paquete diferente habria que importar el paquete donde esta la clase: import.nombrepaquete.nombreClase;
+
 public class mainCuenta {
     public static void main(String[] args) {
 
-        superCuenta.Cuenta cuenta1 = new superCuenta.Cuenta();
+        Cuenta cuenta1 = new superCuenta.Cuenta();
 
         Scanner sc = new Scanner(System.in);
         System.out.println("Introduce el numero de cuenta");
 
-        cuenta1.nCuenta = sc.nextLine();
+        cuenta1.setnCuenta(sc.nextLine());
 
         System.out.println("Introduce el titular de la cuenta");
 
-        cuenta1.cliente = sc.nextLine();
+        cuenta1.setCliente(sc.nextLine());
 
         System.out.println("Introduce el tipo de interes");
 
-        cuenta1.tInteres = sc.nextDouble();
+        cuenta1.settInteres(sc.nextDouble());
 
         System.out.println("Por utlimo, introduce el saldo");
 
-        cuenta1.saldo = sc.nextDouble();
+        cuenta1.setSaldo(sc.nextDouble());
 
-        superCuenta.Cuenta cuenta2 = new superCuenta.Cuenta("Juan Ferrández Rubio", "12345678901234567890", 1.75, 300);
+        Cuenta cuenta2 = new superCuenta.Cuenta("Juan Ferrández Rubio", "12345678901234567890", 1.75, 300);
 
-        superCuenta.Cuenta cuenta3 = new superCuenta.Cuenta(cuenta1);
+        Cuenta cuenta3 = new superCuenta.Cuenta(cuenta1);
 
         System.out.println("Datos Cuenta1\n" +
-                "Titular="+cuenta1.cliente+".\n" +
-                "Numero="+cuenta1.nCuenta+".\n" +
-                "Interes="+cuenta1.tInteres+".\n" +
-                "Saldo="+cuenta1.saldo+".");
+                "Titular="+cuenta1.getCliente()+".\n" +
+                "Numero="+cuenta1.getnCuenta()+".\n" +
+                "Interes="+cuenta1.gettInteres()+".\n" +
+                "Saldo="+cuenta1.getSaldo()+".");
 
         System.out.println("Realiza un ingreso en la Cuenta1");
 
@@ -41,29 +45,29 @@ public class mainCuenta {
         cuenta1.Ingreso(add1);
 
         System.out.println("Cuenta 1\n" +
-                "Saldo="+cuenta1.saldo+".");
+                "Saldo="+cuenta1.getSaldo()+".");
 
 
         System.out.println("Datos Cuenta2\n" +
-                "Titular="+cuenta2.cliente+".\n" +
-                "Numero="+cuenta2.nCuenta+".\n" +
-                "Interes="+cuenta2.tInteres+".\n" +
-                "Saldo="+cuenta2.saldo+".");
+                "Titular="+cuenta2.getCliente()+".\n" +
+                "Numero="+cuenta2.getnCuenta()+".\n" +
+                "Interes="+cuenta2.gettInteres()+".\n" +
+                "Saldo="+cuenta2.getSaldo()+".");
 
 
         System.out.println("Datos Cuenta3\n" +
-                "Titular="+cuenta3.cliente+".\n" +
-                "Numero="+cuenta3.nCuenta+".\n" +
-                "Interes="+cuenta3.tInteres+".\n" +
-                "Saldo="+cuenta3.saldo+".");
+                "Titular="+cuenta3.getCliente()+".\n" +
+                "Numero="+cuenta3.getnCuenta()+".\n" +
+                "Interes="+cuenta3.gettInteres()+".\n" +
+                "Saldo="+cuenta3.getSaldo()+".");
 
         cuenta3.Transferencia(cuenta2, 10);
 
         System.out.println("Cuenta 2\n" +
-                "Saldo="+cuenta2.saldo+".");
+                "Saldo="+cuenta2.getSaldo()+".");
 
         System.out.println("Cuenta 3\n" +
-                "Saldo="+cuenta3.saldo+".");
+                "Saldo="+cuenta3.getSaldo()+".");
 
 
 
