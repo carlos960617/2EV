@@ -30,7 +30,7 @@ public class Pedidos {
 
         int tardanza;
 
-        if (Objects.equals(direccion, "Comunidad Valenciana") && ramo.getElaboracion() < 2){
+        if (Objects.equals(direccion, "Comunidad Valenciana") && ramo.getElaboracion() == 2){
             tardanza =  5;
         }else{return tardanza =  12;}
 
@@ -47,6 +47,22 @@ public class Pedidos {
         String diaMes = fechaActual.substring(0,2);
 
         System.out.println(mesActual);*/
+
+        Scanner sc = new Scanner(System.in);
+        Ramos ramo1 = new Ramos();
+
+        System.out.println("Bienvenida a ramos a domicilio.");
+        ramo1.setFlor();
+
+        System.out.println("¿Quieres que te lo envolvamos para regalo?");
+        ramo1.esRegalo(sc.nextBoolean());
+
+        if(ramo1.getRegalo()){
+            System.out.println("Introduce la dedicatoria que quieras añadir a tu regalo");
+            ramo1.setDedicatoria(sc.nextLine());
+        }else{
+            System.out.println("No hay problema.");
+        }
 
     }
 }

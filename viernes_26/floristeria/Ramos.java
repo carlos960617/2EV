@@ -15,22 +15,36 @@ public class Ramos {
     private boolean regalo;
     private int elaboracion;
 
+    public boolean getRegalo(){
+        return regalo;
+    }
+
     public int getElaboracion() {
         return elaboracion;
     }
 
-    public void setFlor(String flor1){
+    public void setFlor(){
         System.out.println("Elige las flores de las que quieres que se componga tu ramo. \n " +
                 "Puedes elegir entre cuatro tipos diferentes: rosa, lirio, tulipan y clavel");
-        flor1 = sc.nextLine();
-        flor2 = sc.nextLine();
-        flor3 = sc.nextLine();
-        flor4 = sc.nextLine();
+        for(int i = 0; i<4; i++){
+            String entrada = sc.nextLine();
+            if(i==0){
+                flor1 = entrada;
+                System.out.println("Siguiente flor(si solo quieres un tipo en concreto repitelo):");
+            } else if (i == 1) {
+                flor2 = entrada;
+                System.out.println("Siguiente flor(si solo quieres un tipo en concreto repitelo):");
+            } else if (i==2){
+                flor3 = entrada;
+                System.out.println("Siguiente flor(si solo quieres un tipo en concreto repitelo):");
+            }else{flor4=entrada;}
+
+        }
 
     }
 
     public void setDedicatoria(String texto){
-        System.out.println("Introduce el texto que quieras que acompañe tu ramo");
+        //System.out.println("Introduce el texto que quieras que acompañe tu ramo");
 
         dedicatoria = sc.nextLine();
     }
@@ -45,6 +59,19 @@ public class Ramos {
 
         System.out.println("Bienvenide al sirvicio on-line de ");
 
+
+    }
+
+    public void esRegalo(boolean x){
+        regalo = x;
+    }
+
+    public void setElaboracion(){
+        if(cantidad < 5 ){
+            elaboracion = 1;
+        }else if(cantidad <25){
+            elaboracion = 2;
+        }else{elaboracion = 3;}
 
     }
 }
