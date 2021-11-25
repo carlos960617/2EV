@@ -14,6 +14,22 @@ public class Ramos {
     private int cantidad;
     private boolean regalo;
     private int elaboracion;
+    private double precio;
+
+    public String getDedicatoria(){
+        return dedicatoria;
+    }
+
+    public void setPrecio(){
+        precio = cantidad * 3;
+        if(regalo){
+            precio += 10;
+        }
+    }
+
+    public double getPrecio(){
+        return precio;
+    }
 
     public boolean getRegalo(){
         return regalo;
@@ -24,42 +40,37 @@ public class Ramos {
     }
 
     public void setFlor(){
-        System.out.println("Elige las flores de las que quieres que se componga tu ramo. \n " +
+        System.out.println("Elige las flores de las que quieres que se componga tu ramo. \n" +
                 "Puedes elegir entre cuatro tipos diferentes: rosa, lirio, tulipan y clavel");
         for(int i = 0; i<4; i++){
             String entrada = sc.nextLine();
             if(i==0){
                 flor1 = entrada;
-                System.out.println("Siguiente flor(si solo quieres un tipo en concreto repitelo):");
+                System.out.println("Siguiente flor(enter si no quieres mas):");
             } else if (i == 1) {
                 flor2 = entrada;
-                System.out.println("Siguiente flor(si solo quieres un tipo en concreto repitelo):");
+                System.out.println("Siguiente flor(enter si no quieres mas):");
             } else if (i==2){
                 flor3 = entrada;
-                System.out.println("Siguiente flor(si solo quieres un tipo en concreto repitelo):");
+                System.out.println("Siguiente flor(enter si no quieres mas):");
             }else{flor4=entrada;}
 
         }
 
     }
 
-    public void setDedicatoria(String texto){
-        //System.out.println("Introduce el texto que quieras que acompañe tu ramo");
+    public void setDedicatoria(){
 
-        dedicatoria = sc.nextLine();
+        dedicatoria =  sc.nextLine();
     }
 
     public void setCantidad(int numero){
-
-        System.out.println("Elige de cuantas flores quieres que se componga tu ramo de 1 a 50 flores.");
         cantidad = numero;
+        setElaboracion();
     }
 
-    public static void main(String[] args) {
-
-        System.out.println("Bienvenide al sirvicio on-line de ");
-
-
+    public int getCantidad(){
+        return cantidad;
     }
 
     public void esRegalo(boolean x){
@@ -67,11 +78,16 @@ public class Ramos {
     }
 
     public void setElaboracion(){
+        //dias que tarda en prepararse
         if(cantidad < 5 ){
             elaboracion = 1;
         }else if(cantidad <25){
             elaboracion = 2;
         }else{elaboracion = 3;}
 
+    }
+
+    public String getFlor(){
+        return flor1 +" "+ flor2 +" "+ flor3 +" "+ flor4;
     }
 }
