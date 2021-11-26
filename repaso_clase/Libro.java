@@ -10,6 +10,10 @@ public class Libro {
     public Libro(){}
 
     public Libro(String titulo, String autor, int ejemplares, int prestados){
+        this.titulo = titulo;
+        this.autor = autor;
+        this.ejemplares = ejemplares;
+        this.prestados = prestados;
 
     }
 
@@ -48,25 +52,29 @@ public class Libro {
 
     public boolean prestamo (){
 
-        if(ejemplares<1){
+        if(ejemplares<=prestados){
             System.out.println("Lo siento, no quedan libros.");
             return false;
-        }else{setPrestados(1);
+        }else{prestados++;
         return true;}
 
     }
 
     public boolean devolucion(){
-        if(prestamo()){
+        if(prestados>0){
 
-            setPrestados(-1);
+            prestados--;
             return true;
 
         }else{return false;}
     }
 
+    @Override
     public String toString(){
 
-        return null;
+        return "Titulo = "+titulo+"\n" +
+                "Autor = "+autor+"\n" +
+                "Ejemplare = "+ejemplares+"\n" +
+                "Prestados = "+prestados ;
     }
 }
