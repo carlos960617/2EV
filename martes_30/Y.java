@@ -13,9 +13,51 @@ public class Y {
 
         System.out.println("Introduce un numero entre 5 y 15");
 
-        int n = sc.nextInt();
+        int bigN = sc.nextInt();
+        int n = bigN;
+        int h = 0;
+        int sum = 0;
+        int num;
+        int prod = 1;
 
-        int bign = n;
+        for (int i = 0; i<bigN/2;i++){
+            for(int k=0; k<=h;k++){
+                System.out.print(" ");
+            }
+            for(int j = 0; j<n;j++){
+                if(j==0 || j==n-1){
+                    num = rndm.nextInt(10 - 1) +1;
+                    System.out.print(num);
+                    sum += num;
+                    prod *= num;
+                }else{
+                    System.out.print(" ");
+                }
+            }
+            n -=2;
+            h++;
+            System.out.println(" ");
+        }
+
+        for (int i = 0; i<=bigN/2;i++){
+            for(int j=0; j<=bigN/2+1;j++){
+                if(j==bigN/2+1){
+                    num = rndm.nextInt(10-1)+1;
+                    System.out.print(num);
+                    sum += num;
+                    prod *= num;
+                }else{
+                    System.out.print(" ");
+                }
+
+            }
+            System.out.println(" ");
+        }
+
+        System.out.println("El sumatorio de los numeros es = "+sum+"\n" +
+                "Y el producto = "+prod);
+
+        /*int bign = n;
         int x=0;
 
         for(int i=0; i<bign-((bign/2)-1);i++){
@@ -40,6 +82,6 @@ public class Y {
             }
             System.out.println(rndm.nextInt(10));
 
-        }
+        }*/
     }
 }
