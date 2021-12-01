@@ -11,9 +11,16 @@ public class Y {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Introduce un numero entre 5 y 15");
+        int bigN;
 
-        int bigN = sc.nextInt();
+        do{
+
+            System.out.println("Introduce un numero entre 5 y 15");
+
+            bigN = sc.nextInt();
+
+        }while(bigN >15 || bigN<5 || bigN%2 == 0 );
+
         int n = bigN;
         int h = 0;
         int sum = 0;
