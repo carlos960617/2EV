@@ -6,6 +6,8 @@ public class alternativaScanner {
 
     public static void main(String[] args) {
 
+        //¿Solo se pueden Strings?
+
         String cliente = JOptionPane.showInputDialog("Cliente: ");
     }
 }
