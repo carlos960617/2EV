@@ -36,7 +36,9 @@ public class martes16_1 {
 
         System.out.println("Tu cadena tiene "+numWords+" palabras");
 
+        String extract = "Me duele la barriga";
 
+        System.out.println(extract.substring(3,8));
 
     }
 }

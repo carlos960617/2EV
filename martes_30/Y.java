@@ -27,6 +27,11 @@ public class Y {
         int num;
         int prod = 1;
 
+        /*random = (int)(Math.random()*9)+1;
+        * Math random te da un numero aleatorio entre 0 y 1
+        * Lo multiplicas por nueve para que te de un numero aleatorio entre 0 y 8
+        * Le sumas uno para que te de un numero entre 1 y 9 */
+
         for (int i = 0; i<bigN/2;i++){
             for(int k=0; k<=h;k++){
                 System.out.print(" ");
