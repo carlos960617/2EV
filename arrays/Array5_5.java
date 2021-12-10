@@ -7,11 +7,11 @@ public class Array5_5 {
         double[] array1 = new double[5];
 
         for(int i=0;i<array1.length;i++){
-            array1[i] += Math.random()*11;
+            array1[i] += (int)(Math.random()*11);
         }
 
         double numMax=0;
-        double numMin=0;
+        double numMin=10;
 
         for(int i=array1.length-1;i>=0;i--){
             if(array1[i]>numMax){
@@ -23,6 +23,6 @@ public class Array5_5 {
 
         }
 
-        System.out.println(numMax + ""+ numMin);
+        System.out.println(numMax + " "+ numMin);
     }
 }
