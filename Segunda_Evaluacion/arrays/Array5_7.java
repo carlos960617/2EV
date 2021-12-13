@@ -17,13 +17,85 @@ public class Array5_7 {
 
     }
 
+    public static double calculaMedia(double[] array){
+
+        double media = 0.0;
+        double suma = 0.0;
+        for(int i=0; i<array.length;i++){
+            suma += array[i];
+        }
+
+        media = suma/(array.length);
+
+        return media;
+    }
+
+    public static double[] notasSuperiores(double[] array, double media){
+        int contador = 0;
+        for(int i=0;i<array.length;i++){
+            if(array[i] > media){
+                contador ++;
+            }
+        }
+        //System.out.println("Valor del contador= "+ contador);
+
+        double[] array2 = new double[contador];
+        int contador2 = 0;
+        for(int i=0;i<array.length;i++){
+            if(array[i] > media){
+                array2[contador2] = array[i];
+                contador2++;
+            }
+        }
+
+        return array2;
+    }
+
+    public static void muestraArray(double[] array){
+
+        for(int i= 0;i<array.length;i++){
+            System.out.print(array[i]+" ");
+        }
+    }
+
     public static void main(String[] args) {
 
-        double[] notas = new double[24];
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Introduce el numero de alumnos de la clase");
+
+        int tam = sc.nextInt();
+
+        double[] notas = new double[tam];
 
         System.out.println("Introduce las notas de tus alumnos");
 
-        rellenaArrays(notas);
+        double[] notasRellenas = rellenaArrays(notas);
+
+        //comprobamos que el array se rellena correctamente
+
+        muestraArray(notasRellenas);
+
+        //ok
+
+
+
+        //comprobamos que se muestran las notas mayores a la media
+        System.out.println();
+
+        System.out.println("Esta es la media de las notas");
+
+        double media = calculaMedia(notasRellenas);
+
+        System.out.println(media);
+
+        double[] notasAltas = notasSuperiores(notasRellenas, media);
+
+        System.out.println("Estas son las notas superiores a la media");
+
+        muestraArray(notasAltas);
+
+        System.out.println();
 
 
     }
