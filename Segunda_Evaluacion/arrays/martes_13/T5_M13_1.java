@@ -32,6 +32,12 @@ public class T5_M13_1 {
         return tabla3;
     }
 
+    /* Version del metodo COMBINATOR pero utilizando el hecho de que el inidice del primer array
+    siempre se coloca de 2 en dos (2x) y el de array 2 de dos en dos +1 (2x+1)
+    array[2x] = array1[i];
+    array3[(2x)+1] = array2[i];
+     */
+
     public static int[] leerTabla(int tam){
         int[] tabla = new int[tam];
 

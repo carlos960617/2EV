@@ -72,18 +72,9 @@ public class Array5_7 {
 
         double[] notasRellenas = rellenaArrays(notas);
 
-        //comprobamos que el array se rellena correctamente
-
         muestraArray(notasRellenas);
 
-        //ok
-
-
-
-        //comprobamos que se muestran las notas mayores a la media
-        System.out.println();
-
-        System.out.println("Esta es la media de las notas");
+        System.out.println("\nEsta es la media de las notas");
 
         double media = calculaMedia(notasRellenas);
 
@@ -91,12 +82,10 @@ public class Array5_7 {
 
         double[] notasAltas = notasSuperiores(notasRellenas, media);
 
-        System.out.println("Estas son las notas superiores a la media");
+        System.out.println("\nEstas son las notas superiores a la media");
 
         muestraArray(notasAltas);
 
         System.out.println();
-
-
     }
 }

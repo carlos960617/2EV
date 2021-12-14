@@ -33,6 +33,8 @@ public class Array5_6 {
 
         System.out.println("Elige el tamaño de tus arrays");
 
+        // declarar un array con valores por defecto int[] array = {5,4,7,2,9,4,2,1}
+
         int tam= sc.nextInt();
 
         int[] a1 = new int[tam];
