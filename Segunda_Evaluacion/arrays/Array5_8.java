@@ -6,6 +6,8 @@ public class Array5_8 {
 
     public static int cuentaVocal(String cadena, char letra){
 
+        //cadena.toCharArray();
+
         int contador= 0;
 
         for(int i=0;i<cadena.length();i++){

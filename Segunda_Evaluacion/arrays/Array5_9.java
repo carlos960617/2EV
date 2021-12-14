@@ -18,7 +18,8 @@ public class Array5_9 {
 
         System.out.println(resto);
 
-        String letras = "TRWAGMYFPDXBNJZSQVHLCKE";
+        String letras = "T" +
+                "RWAGMYFPDXBNJZSQVHLCKE";
 
         char prueba = '5';
 
