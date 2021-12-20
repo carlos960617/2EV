@@ -3,7 +3,7 @@ package com.company.Segunda_Evaluacion.arrays.Martes21;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Array_9 {
+public class Array_10 {
 
     static Scanner sc = new Scanner(System.in);
 
@@ -21,14 +21,17 @@ public class Array_9 {
 
         boolean esIgual = true;
 
+        Arrays.sort(array1);
+        Arrays.sort(array2);
+
         if(array1.length != array2.length){
             esIgual = false;
-            System.out.println("Los arrays no tienen la misma longitud");
+            System.out.println("Los arrays ni siquiera tienen la misma longitud");
         }else{
             for(int i= 0; i<array1.length;i++){
                 if(array1[i] != array2[i]){
                     esIgual = false;
-                    System.out.println("Los arrays no contienen los mimsos elementos en el mismo orden");
+                    System.out.println("Los arrays no contienen los mismos elementos");
                 }
             }
         }

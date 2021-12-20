@@ -18,10 +18,11 @@ public class Array5_9 {
 
         System.out.println(resto);
 
-        String letras = "T" +
-                "RWAGMYFPDXBNJZSQVHLCKE";
+        String letras = "TRWAGMYFPDXBNJZSQVHLCKE";
 
         char prueba = '5';
+
+        /*No hace falta el for, con almacenar la letra de letras y equipararla a resto en un if ya te sale! */
 
         for(int i=0;i<23;i++){
             if(i == resto){
