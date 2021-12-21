@@ -1,4 +1,4 @@
-package com.company.Segunda_Evaluacion.arrays.Martes21;
+package com.company.Segunda_Evaluacion.arrays;
 
 import java.util.Arrays;
 
@@ -44,6 +44,15 @@ public class Referencias {
 
        tambien puedes reescribir la direccion de memoria especificando los nuevos valores.
         array = new int[]{1,2,3,4} dirección de memoria: C */
+
+
+        /*Arrays de caracteres:
+        char[] vocales = {a,e,i,o,u}
+        cuando haces sout the chararraysse imprime la cadena de valores directmente no la direccion de mmeoira SORPRESA!
+
+        Cuando defines un objeto sin inizialicarlo con new tiene valor null
+
+         */
 
 
 
