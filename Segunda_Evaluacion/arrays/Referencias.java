@@ -71,11 +71,29 @@ public class Referencias {
          dst = dstTemp;
          */
 
-        int[] array1 = {9,2,3,4,5};
+        /*int[] array1 = {9,2,3,4,5};
 
         Arrays.sort(array1);
 
-        System.out.println(Arrays.toString(array1));
+        System.out.println(Arrays.toString(array1));*/
+
+
+        /*
+        * COLLECTIONS:
+        * Arrays.sort(arrayName, Collections.reverseOrder()).
+        * Solo se puede utilizar sobre arrays de objetos asiqeu si tienes un int[] array tienes que convertirlo en integer[] array porque Integer es
+        * una version objeto de int
+        * */
+
+
+        /*Metodos de ordenacion:
+        Burbuja: el primero y el menos eficiente va comparando los ints de dos en dos y si el segundo es mas bajo que el primero pues los cambia de sitio
+        * En la primera optimizacion se arrastran al final del array los digitos que son mas altos y asi a cada vuelta se le resta el numero de vueltas que das
+        porque no necesitas iterar hasta donde esta guardado el mas alto.
+        La tercera optimizacion utiliza un booleando para parar el forloop cuando el interruptor no se altere porque haya un mayor antes que un menor
+
+        De ordenacion por seleccion:
+        Va colocando los mas pequeños al principio*/
 
 
 
