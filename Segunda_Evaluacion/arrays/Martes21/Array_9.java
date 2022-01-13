@@ -33,8 +33,6 @@ public class Array_9 {
             }
         }
 
-
-
         return esIgual;
     }
 

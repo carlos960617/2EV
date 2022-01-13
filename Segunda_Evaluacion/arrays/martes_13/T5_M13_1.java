@@ -10,7 +10,14 @@ public class T5_M13_1 {
     public static void mostrarTabla(int[] tabla){
 
         for(int i=0;i<tabla.length;i++){
-            System.out.print(tabla[i]+" ");
+            if(i%2 == 0 && i != 0){
+                System.out.print(tabla[i]+"-");
+            }else if(i == tabla.length-1) {
+                System.out.print(tabla[i]+"}");
+            }else if(i == 0){
+                System.out.print("{"+tabla[i]+"-");
+            }else{System.out.print(tabla[i]+", ");}
+
         }
     }
 
@@ -63,7 +70,7 @@ public class T5_M13_1 {
 
         int[] tablaCombinada = combinator(tabla1, tabla2);
 
-        System.out.println("Esto es el resultado de tus tablas combinadas:");
+        System.out.println("Este es el resultado de tus tablas combinadas:");
 
         mostrarTabla(tablaCombinada);
 

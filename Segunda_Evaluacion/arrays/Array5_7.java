@@ -78,7 +78,7 @@ public class Array5_7 {
 
         double media = calculaMedia(notasRellenas);
 
-        System.out.println(media);
+        System.out.printf("% .2f %n", media);
 
         double[] notasAltas = notasSuperiores(notasRellenas, media);
 

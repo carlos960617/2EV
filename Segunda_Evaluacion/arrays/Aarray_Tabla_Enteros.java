@@ -28,8 +28,10 @@ public class Aarray_Tabla_Enteros {
                 System.out.println("Introduce el indice del elemento a consultar");
                 i=sc.nextInt();
 
+                System.out.println("El elemento en indice "+i+ " tiene valor= "+tabla[i]);
+
             }while(i<0 || i>tabla.length-1);
-            System.out.println("El elemento en indice "+i+ "tiene valor= "+tabla[i]);
+            //System.out.println("El elemento en indice "+i+ "tiene valor= "+tabla[i]);
 
         }else{
             System.out.println("No hay elementos que consultar");

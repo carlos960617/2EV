@@ -11,7 +11,7 @@ public class ArrayTester {
         int[] soloPares = new int[tabla.length];
 
         for(int i=0;i<tabla.length;i++){
-            if(i%2 == 0){
+            if(tabla[i]%2 == 0){
                 soloPares[i]= tabla[i];
             }else{soloPares[i] = -1;}
         }
@@ -51,6 +51,12 @@ public class ArrayTester {
         System.out.println("Vamos a crear la tabla:");
 
         tabla1 = leerEnteros(tam);
+
+        System.out.println("Esta es tu tabla:");
+
+        imprimirArray(tabla1);
+
+        System.out.println("\nEsta es tu tabla filtrando los impares:");
 
         int[] tablaFiltrada = transformarArray(tabla1);
 
