@@ -2,8 +2,6 @@ package com.company.Segunda_Evaluacion.arrays;
 
 import java.util.Scanner;
 
-import static com.company.Segunda_Evaluacion.arrays.Aarray_Tabla_Enteros.sc;
-
 public class Array_Tabla_Enteros2 {
 
     static Scanner sc = new Scanner(System.in);
@@ -123,5 +121,4 @@ public class Array_Tabla_Enteros2 {
         }else{return -1;}
 
     }
-
 }

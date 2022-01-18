@@ -1,5 +1,6 @@
 package com.company.Segunda_Evaluacion.arrays.Viernes14Enero;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 import static com.company.Segunda_Evaluacion.arrays.Viernes14Enero.tipo_coche.FAMILIAR;
@@ -47,6 +48,10 @@ public class Principal {
                 System.out.println("Numero de Bastidor: "+ copiasCoche[i].getNumBastidor()+"       Modelo: "+ copiasCoche[i].getModelo()+"      Metalizado: "+ copiasCoche[i].isMetalizado()+"      Color: "+ copiasCoche[i].getColor()+"       Tipo: "+ copiasCoche[i].getTipo());
 
         }
+
+        Coche copia1 = copiasCoche[0];
+
+        System.out.println(Arrays.toString(copiasCoche));
 
 
 
