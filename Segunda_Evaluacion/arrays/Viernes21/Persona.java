@@ -47,4 +47,35 @@ public class Persona {
     public void setCuenta(Cuenta[] cuenta) {
         this.cuenta = cuenta;
     }
+
+    @Override
+    public String toString(){
+
+        String s1 = "DNI= "+DNI+"\n" +
+                "Cuentas Asociadas:\n";
+
+        String s2 = "";
+
+        for(int i=0, j=1; i<cuenta.length;i++, j++){
+            if(cuenta[i] != null){
+
+                s2 +=
+                        "Cuenta "+j+": "+ cuenta[i].getBanco()+"\n" +
+                        "IBAN: "+cuenta[i].getIBAN()+"\n" +
+                        "SALDO: "+cuenta[i].getSaldo();
+
+            }
+        }
+
+        String s3 = "Morosidad";
+
+        if(morosidad()){
+            s3 = "\u001B[31m Es moroso";
+        }else{
+            s3 = "No es moroso";
+        }
+
+        return s1 + s2 +"\n"+ s3;
+
+    }
 }

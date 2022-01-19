@@ -17,15 +17,9 @@ public class PruebaCuentas {
 
         Cuenta cuenta2 = new Cuenta("Grupo Elementos", 343534543, 700);
 
-        System.out.println(Arrays.toString(persona1.getCuenta()));
-
         persona1.nuevaCuenta(cuenta1);
 
-        System.out.println(Arrays.toString(persona1.getCuenta()));
-
         persona1.nuevaCuenta(cuenta2);
-
-        System.out.println(Arrays.toString(persona1.getCuenta()));
 
 
         Cuenta[] cuentasP1 = persona1.getCuenta();
@@ -35,6 +29,8 @@ public class PruebaCuentas {
         cuentasP1[1].pagos(750);
 
         System.out.println(persona1.morosidad());
+
+        System.out.println(persona1);
 
 
 
