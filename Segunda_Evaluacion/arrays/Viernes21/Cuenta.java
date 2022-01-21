@@ -22,9 +22,7 @@ public class Cuenta {
     }
 
 
-    public int getSaldo() {
-        return saldo;
-    }
+    public int getSaldo() {return saldo;}
 
 
     public long getIBAN() {

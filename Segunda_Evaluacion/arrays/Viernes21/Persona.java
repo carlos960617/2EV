@@ -70,7 +70,7 @@ public class Persona {
         String s3 = "Morosidad";
 
         if(morosidad()){
-            s3 = "\u001B[31m Es moroso";
+            s3 = "\u001B[31m Es moroso\033[0;100m";
         }else{
             s3 = "No es moroso";
         }

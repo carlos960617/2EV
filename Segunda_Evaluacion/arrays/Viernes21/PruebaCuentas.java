@@ -32,6 +32,10 @@ public class PruebaCuentas {
 
         System.out.println(persona1);
 
+        cuentasP1[0].transfer(cuenta2, 500);
+
+        System.out.println(persona1);
+
 
 
 
