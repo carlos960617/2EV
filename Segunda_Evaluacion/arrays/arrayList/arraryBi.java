@@ -1,4 +1,4 @@
-package com.company.Segunda_Evaluacion.arrays.arrayList;
+/*package com.company.Segunda_Evaluacion.arrays.arrayList;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -22,4 +22,4 @@ public class arraryBi {
 
 
     }
-}
+}*/
