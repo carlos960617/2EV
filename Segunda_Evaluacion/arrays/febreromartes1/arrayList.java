@@ -12,7 +12,7 @@ public class arrayList {
 
         for(int i = 0;i<a.size();i++){
             if(a.get(i) > media ){
-                System.out.println(a.get(i)+": mayor a la media");
+                System.out.println(a.get(i)+": mayor a la media");//
             }else{
                 System.out.println(a.get(i)+": menor a la media");
             }
