@@ -63,7 +63,7 @@ public class Alumno {
 
     public static float calcularMedias(ArrayList<Alumno> a){
 
-        float suma=0;////
+        float suma=0;//////
 
         for (Alumno alumno : a) {
             suma += alumno.getAltura();
