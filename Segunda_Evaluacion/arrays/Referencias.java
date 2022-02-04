@@ -96,6 +96,11 @@ public class Referencias {
         Va colocando los mas pequeños al principio*/
 
 
+        /*Lleva cuidado despues de usar la clase escaner con introduccion de primtivios tipo numero (int, double, floats...)
+        * Porque añaden un espacio en blanco el cual rellenará las entradas por teclado posteriores. Para evitar eso despues
+        * de las entradas de numeros añade otro sc.nextLine() vacio y se soluciona.*/
+
+
 
 
 
