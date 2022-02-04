@@ -23,9 +23,9 @@ public class ArrayClase2 {
 
     public static ArrayList<String> revierteArray(ArrayList<String> a){
 
-        ArrayList<String> invertido = new ArrayList<>(a);
+        ArrayList<String> invertido = new ArrayList<>();
 
-        for(int i=0, j=a.size()-1;j<=0;j--, i++ ){
+        for(int i=0, j=a.size()-1;j>=0;j--, i++ ){
             invertido.add(i, a.get(j));
         }
         System.out.println("Array invertido="+invertido);

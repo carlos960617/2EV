@@ -8,7 +8,7 @@ public class arrayList {
     static Scanner sc = new Scanner(System.in);
 
 
-    public static void mayorMedia (ArrayList<Integer> a, int media){
+    public static void mayorMedia (ArrayList<Integer> a, int media){//
 
         for(int i = 0;i<a.size();i++){
             if(a.get(i) > media ){
