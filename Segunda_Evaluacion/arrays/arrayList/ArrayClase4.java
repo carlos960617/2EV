@@ -12,8 +12,7 @@ public class ArrayClase4 {
         ArrayList<String> cadenaCon5 = new ArrayList<>();
 
         int count = 0;
-        boolean aCheck = false;
-        boolean eCheck = false;
+        boolean aCheck = false, eCheck = false;
         boolean iCheck= false;
         boolean oCheck= false;
         boolean uCheck= false;
@@ -35,11 +34,7 @@ public class ArrayClase4 {
             if(aCheck && eCheck && iCheck && oCheck && uCheck) {
                 cadenaCon5.add(c);
             }
-            aCheck = false;
-            eCheck = false;
-            iCheck = false;
-            oCheck = false;
-            uCheck = false;
+            aCheck = false;eCheck = false;iCheck = false;oCheck = false;uCheck = false;
 
         }
 
