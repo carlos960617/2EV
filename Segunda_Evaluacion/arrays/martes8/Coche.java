@@ -50,6 +50,59 @@ public class Coche {
         }
     }
 
+    public static void cochesKMX(ArrayList<Coche> a){
+        System.out.println("Introduce la cantidad de KM maxima");
+        int kmMax = sc.nextInt();
+        for(Coche C:a){
+            if(C.km <= kmMax )
+            {
+                System.out.println("Coche: "+C.marca+"\n" +
+                        "Kilometraje: "+C.km);
+                System.out.println("");
+
+            }
+
+        }
+    }
+
+    public static void maxKM(ArrayList<Coche> a){
+
+        int max=0;
+        Coche maxCoche=null;
+        for(Coche C:a){
+            if(C.km > max ){
+                maxCoche = C;
+                max =  C.km;
+            }
+        }
+        System.out.println("El coche con mas kilometros es:");
+        System.out.println(maxCoche.marca+"\n" +
+                " con "+maxCoche.km+" kilómetros");
+        System.out.println("");
+
+    }
+
+    public static void ordenados(ArrayList<Coche> a){
+
+        int max=0;
+        Coche maxCoche=null;
+        for(Coche C:a){
+            if(C.km > max ){
+                maxCoche = C;
+                max =  C.km;
+            }
+        }
+        System.out.println("El coche con mas kilometros es:");
+        System.out.println(maxCoche.marca+"\n" +
+                " con "+maxCoche.km+" kilómetros");
+        System.out.println("");
+
+    }
+
+
+
+
+
 
     public String getMarca() {
         return marca;
@@ -78,6 +131,8 @@ public class Coche {
         muestraCoches(garaje);
 
         cochesMarcaX(garaje);
+
+
 
 
     }
