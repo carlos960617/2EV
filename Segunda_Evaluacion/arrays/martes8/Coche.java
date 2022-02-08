@@ -15,7 +15,7 @@ public class Coche {
         System.out.println("Introduce el primer modelo");
         String marca=sc.nextLine();
         Coche cocheX;
-        while(marca != "salir"){
+        while(!marca.equals("salir")){
             cocheX = new Coche();
             cocheX.marca = marca;
             System.out.println("Introduce su kilometraje");
@@ -23,6 +23,7 @@ public class Coche {
             garaje.add(cocheX);
             sc.nextLine();
             System.out.println("Siguiente coche(\"salir\" para acabar)");
+            marca= sc.nextLine();
         }
     }
 
@@ -31,7 +32,6 @@ public class Coche {
         for(Coche C:a){
             System.out.println("Coche: "+C.marca+"\n" +
                     "Kilometraje: "+C.km);
-            System.out.println("");
         }
     }
 
@@ -39,11 +39,10 @@ public class Coche {
         System.out.println("Introduce de que marca quieres que se muestren los coches");
         String marcaX = sc.nextLine();
         for(Coche C:a){
-            if(C.marca == marcaX )
+            if(C.marca.equalsIgnoreCase(marcaX))
             {
                 System.out.println("Coche: "+C.marca+"\n" +
                         "Kilometraje: "+C.km);
-                System.out.println("");
 
             }
 
@@ -53,12 +52,12 @@ public class Coche {
     public static void cochesKMX(ArrayList<Coche> a){
         System.out.println("Introduce la cantidad de KM maxima");
         int kmMax = sc.nextInt();
+        System.out.println("Coches con "+ kmMax + " o menos kilometros:");
         for(Coche C:a){
             if(C.km <= kmMax )
             {
                 System.out.println("Coche: "+C.marca+"\n" +
                         "Kilometraje: "+C.km);
-                System.out.println("");
 
             }
 
@@ -68,7 +67,7 @@ public class Coche {
     public static void maxKM(ArrayList<Coche> a){
 
         int max=0;
-        Coche maxCoche=null;
+        Coche maxCoche = null;
         for(Coche C:a){
             if(C.km > max ){
                 maxCoche = C;
@@ -77,34 +76,34 @@ public class Coche {
         }
         System.out.println("El coche con mas kilometros es:");
         System.out.println(maxCoche.marca+"\n" +
-                " con "+maxCoche.km+" kilómetros");
-        System.out.println("");
+                "con "+maxCoche.km+" kilómetros");
 
     }
 
     public static void ordenados(ArrayList<Coche> a){
+        Coche aux;
+        boolean cambio = true;
+        int j = 0;
+        while(cambio){
+            cambio = false;
+            for(int i=0 ;i<a.size()-1-j;i++){
+                Coche C = a.get(i);
+                Coche S = a.get(i+1);
+                if(C.km > S.km ){
+                    aux = C;
+                    a.set(i, S);
+                    a.set(i+1, aux);
+                    cambio = true;
+                }
 
-        int max=0;
-        Coche maxCoche=null;
-        for(Coche C:a){
-            if(C.km > max ){
-                maxCoche = C;
-                max =  C.km;
+
             }
+            j++;
         }
-        System.out.println("El coche con mas kilometros es:");
-        System.out.println(maxCoche.marca+"\n" +
-                " con "+maxCoche.km+" kilómetros");
-        System.out.println("");
 
     }
 
-
-
-
-
-
-    public String getMarca() {
+    /*public String getMarca() {
         return marca;
     }
 
@@ -118,7 +117,7 @@ public class Coche {
 
     public void setKm(int km) {
         this.km = km;
-    }
+    }*/
 
     public static void main(String[] args) {
 
@@ -131,6 +130,14 @@ public class Coche {
         muestraCoches(garaje);
 
         cochesMarcaX(garaje);
+
+        cochesKMX(garaje);
+
+        maxKM(garaje);
+
+        System.out.println("Coches de menor a mayor kilometraje:");
+        ordenados(garaje);
+        muestraCoches(garaje);
 
 
 

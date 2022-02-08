@@ -1,4 +1,4 @@
-package com.company.Segunda_Evaluacion.arrays.viernes4Febrero;
+package com.company.Segunda_Evaluacion.arrays.Viernes4Febrero;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -51,7 +51,7 @@ public class Alumno {
             a.add(alumno);
             System.out.println("Introduce el siguiente alumno");
             nombre= sc.nextLine();
-        };
+        }
     }
 
     public static void mostrarAlumnos(ArrayList<Alumno> a){
@@ -89,7 +89,7 @@ public class Alumno {
 
     public static void main(String[] args) {
 
-        ArrayList<Alumno> severo = new ArrayList<Alumno>();
+        ArrayList<Alumno> severo = new ArrayList<>();
 
         incluirAlumnos(severo);
 
