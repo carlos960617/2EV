@@ -8,11 +8,11 @@ public class arrayList {
     static Scanner sc = new Scanner(System.in);
 
 
-    public static void mayorMedia (ArrayList<Integer> a, int media){
+    public static void mayorMedia (ArrayList<Integer> a, int media){//
 
         for(int i = 0;i<a.size();i++){
             if(a.get(i) > media ){
-                System.out.println(a.get(i)+": mayor a la media");
+                System.out.println(a.get(i)+": mayor a la media");//
             }else{
                 System.out.println(a.get(i)+": menor a la media");
             }
