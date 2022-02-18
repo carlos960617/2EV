@@ -1,0 +1,13 @@
+final clases** no permiten tener herederos
+no existe la herencia multiple en java, solo se puede heredar de un padre
+los constructores no se heredan
+con protected no solo funcionan las clases hijas sino tambien las que estan dentro del mismo ¡PAQUETE!
+si el metodo del hijoy  del padre se mllamn igual y no se especifica super.metodo o this.emtodo llamará al de la clase padre.
+
+
+
+Cuando vas a override un metodo de una clase hija, si tiene diferentes parametros a la de al clase padre
+ya no hace falta llamarlo "override no?"
+
+Por defecto utilizando un metodo dentro de la clase hija sin prefijo se sobreentiende como super.metodo()?
+Pasa lo mismo con los atributos? sino pones this.atributo cree que es super.atributo?
