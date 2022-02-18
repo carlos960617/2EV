@@ -51,7 +51,7 @@ public class Alumno {
             a.add(alumno);
             System.out.println("Introduce el siguiente alumno");
             nombre= sc.nextLine();
-        }
+        };
     }
 
     public static void mostrarAlumnos(ArrayList<Alumno> a){
@@ -72,24 +72,12 @@ public class Alumno {
         return suma/a.size();
     }
 
-    public static void mostrarResultados(ArrayList<Alumno> a, float media) {
-
-        for (Alumno A : a) {
-            if (A.getAltura() > media) {
-                System.out.println(A.getAltura() + " es mayor a la media");
-            } else {
-                System.out.println(A.getAltura() + "es menor a la media");
-            }
-        }
-
-    }
-
 
 
 
     public static void main(String[] args) {
 
-        ArrayList<Alumno> severo = new ArrayList<>();
+        ArrayList<Alumno> severo = new ArrayList<Alumno>();
 
         incluirAlumnos(severo);
 
@@ -98,9 +86,7 @@ public class Alumno {
 
         mostrarAlumnos(severo);
 
-       float media =  calcularMedias(severo);
 
-       mostrarResultados(severo, media);
 
     }
 
